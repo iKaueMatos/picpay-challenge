@@ -1,10 +1,6 @@
 # Desafio de Back-End do PicPay
 
-<div>
-    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FPicPay&psig=AOvVaw2R3SnRBgV4eIVbhXhcQGNO&ust=1699185895102000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNjX7oGnqoIDFQAAAAAdAAAAABAE" alt="picpay image"/>
-</div>
-
-<br>
+![picpay](https://www.foregon.com/media/uploads/2021/05/235-picpay-1.jpg)
 
 Olá seja bem vindo ao meu desafio back-end para o picpay utilizando java e springboot no formato de API RESTFULL.
 
@@ -44,13 +40,13 @@ Bem-vindo à documentação da API do nosso projeto Spring Boot. Abaixo, você e
 A documentação da API pode ser encontrada em: https://localhost:8080/swagger-ui/index.html
 
 
-# Corpo do E-mail para contato ! [![My Skills](https://skillicons.dev/icons?i=linkedin, gmail)](https://skillicons.dev)
+# Corpo do E-mail para contato !
 
 Seu Nome: kaue de matos oliveira
 
 Nome do recrutador:
 
-Link do repositório:
+Link do repositório:https://github.com/iKaueMatos/picpaychallenge/edit/Picpay/
 
 Link do Linkedin:https://www.linkedin.com/in/ikauematos/
 
