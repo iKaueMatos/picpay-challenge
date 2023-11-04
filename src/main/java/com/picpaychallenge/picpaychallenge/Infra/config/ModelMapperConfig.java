@@ -1,16 +1,15 @@
-// package com.picpaychallenge.picpaychallenge.Infra.config;
-// package com.picpaychallenge.picpaychallenge.Infra.Config;
+package com.picpaychallenge.picpaychallenge.Infra.config;
 
-// import org.modelmapper.ModelMapper;
-// import org.springframework.context.annotation.Bean;
-// import org.springframework.context.annotation.Configuration;
+import org.modelmapper.ModelMapper;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-// @Configuration
-// public class ModelMapperConfig {
+@Configuration
+public class ModelMapperConfig {
     
-//     @Bean
-//     public ModelMapper modelMapper() {
-//         ModelMapper modelMapper = new ModelMapper();
-//         return modelMapper;
-//     }
-// }
+    @Bean
+    public ModelMapper modelMapper() {
+        ModelMapper modelMapper = new ModelMapper();
+        return modelMapper;
+    }
+}
