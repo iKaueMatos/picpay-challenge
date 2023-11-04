@@ -3,6 +3,7 @@ package com.picpaychallenge.picpaychallenge.Application.DTO.Transaction;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import com.picpaychallenge.picpaychallenge.Application.DTO.User.UserDTO;
 import com.picpaychallenge.picpaychallenge.Persistence.Entity.UsersEntity;
 
 import lombok.Data;
@@ -23,4 +24,6 @@ public class TransactionDTO {
     private UsersEntity receiver;
 
     private LocalDateTime timeSDateTime;
+
+    private UserDTO userDTO;
 }

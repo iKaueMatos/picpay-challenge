@@ -1,7 +1,5 @@
 package com.picpaychallenge.picpaychallenge.Application.UseCases.User;
 
-import java.math.BigDecimal;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,8 +18,6 @@ public class UserUseCase {
     public UserService userService;
 
     public ResponseEntity<UserCreationResponse> execute(UserDTO userDTO) {
-        BigDecimal amountValue = userDTO.getBalance();
-    
         if (userServiceValidation != null) {
             UserCreationResponse response = userService.createUser(userDTO);
 
