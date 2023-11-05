@@ -1,4 +1,4 @@
-package com.picpaychallenge.picpaychallenge.Infra.config;
+package com.picpaychallenge.picpaychallenge.Infra.Config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;

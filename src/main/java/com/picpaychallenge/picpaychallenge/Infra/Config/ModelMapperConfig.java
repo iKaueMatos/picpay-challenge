@@ -1,4 +1,4 @@
-package com.picpaychallenge.picpaychallenge.Infra.config;
+package com.picpaychallenge.picpaychallenge.Infra.Config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
