@@ -19,11 +19,11 @@ public class UserUseCase {
 
     public ResponseEntity<UserCreationResponse> execute(UserDTO userDTO) {
         if (userServiceValidation != null) {
-            UserCreationResponse response = userService.createUser(userDTO);
+            UserDTO response = userService.createUser(userDTO);
 
-            return ResponseEntity.ok(response);
-        } else {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new UserCreationResponse(null, "Falha na criação do usuário"));
+            return ResponseEntity.status(HttpStatus.OK).body(new UserCreationResponse(response, "Candidato criado com sucesso"));
         }
+        
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new UserCreationResponse(null, "Falha na criação do usuário"));
     }
 }

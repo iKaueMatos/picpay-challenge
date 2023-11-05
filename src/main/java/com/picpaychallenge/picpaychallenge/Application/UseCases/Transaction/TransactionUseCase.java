@@ -1,14 +1,11 @@
 package com.picpaychallenge.picpaychallenge.Application.UseCases.Transaction;
 
-import java.math.BigDecimal;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 
 import com.picpaychallenge.picpaychallenge.Application.DTO.Transaction.TransactionDTO;
-import com.picpaychallenge.picpaychallenge.Domain.User.Services.UserService;
+import com.picpaychallenge.picpaychallenge.Domain.Transactions.Services.TransactionService;
 import com.picpaychallenge.picpaychallenge.Domain.User.Services.UserServiceValidation;
-import com.picpaychallenge.picpaychallenge.Domain.User.Transactions.Services.TransactionService;
-import com.picpaychallenge.picpaychallenge.Persistence.Entity.UsersEntity;
 
 public class TransactionUseCase {
     
@@ -18,22 +15,13 @@ public class TransactionUseCase {
     @Autowired
     private UserServiceValidation userServiceValidation;
 
-    private UserService userService;
+    public ResponseEntity<TransactionDTO> execute(TransactionDTO transactionDTO) throws Exception {
+         if (userServiceValidation != null) {
+            TransactionDTO response = transactionService.createTransaction(transactionDTO);
 
-    public TransactionDTO execute(TransactionDTO transactionDTO) throws Exception {
-        long senderId = transactionDTO.getSender().getId();
-        long receiverId = transactionDTO.getReceiver().getId();
-
-        BigDecimal amount = transactionDTO.getAmount();
-        UsersEntity sender = userService.findByUserId(senderId);
-        UsersEntity receiver = userService.findByUserId(receiverId);
+            return ResponseEntity.ok(response);
+        }
         
-        userServiceValidation.validationTransactionUser(sender, amount);
-
-        return transactionDTO;
+        return (ResponseEntity<TransactionDTO>) ResponseEntity.badRequest();
     }
-
-    // public boolean authorizationTransaction(UsersEntity usersEntity, BigDecimal value) {
-
-    // }
 }

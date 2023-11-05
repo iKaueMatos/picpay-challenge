@@ -8,8 +8,8 @@ public class UserCreationResponse {
 
     private String responseMessage;
 
-    public UserCreationResponse(UserDTO userDTO, String responseMessage) {
-        this.userDTO = userDTO;
+    public UserCreationResponse(UserDTO response, String responseMessage) {
+        this.userDTO = response;
         this.responseMessage = responseMessage;
     }
 

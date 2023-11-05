@@ -1,4 +1,4 @@
-package com.picpaychallenge.picpaychallenge.Domain.User.Transactions.Model;
+package com.picpaychallenge.picpaychallenge.Domain.Transactions.Model;
 
 import org.modelmapper.ModelMapper;
 
